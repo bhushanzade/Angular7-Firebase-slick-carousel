@@ -18,8 +18,12 @@ firebase: {
     projectId: "YOUR_PROJECT_ID",
     storageBucket: "",
     messagingSenderId: "YOUR_MESSAGING_SENDER_ID"
-    
+
   }
+
+#Live Demo
+
+https://techved-task.firebaseapp.com/
 
 ## Code scaffolding
 
