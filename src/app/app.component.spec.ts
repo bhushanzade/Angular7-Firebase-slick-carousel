@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'Techved-Task-Bhushan-Zade'`, () => {
+  it(`should have as title 'Angular7-Firebase-Crud-Slick-Carousel'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('Techved-Task-Bhushan-Zade');
+    expect(app.title).toEqual('Angular7-Firebase-Crud-Slick-Carousel');
   });
 
   it('should render title in a h1 tag', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('Welcome to Techved-Task-Bhushan-Zade!');
+    expect(compiled.querySelector('h1').textContent).toContain('Welcome to Angular7-Firebase-Crud-Slick-Carousel!');
   });
 });

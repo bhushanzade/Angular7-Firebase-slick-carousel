@@ -1,0 +1,74 @@
+<div class="jumbotron text-center">
+  <h1>Welcome to Student Dashboard</h1><br>
+  <h3>Example of slick-carousel</h3>
+</div>
+<div class="container">
+    <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig">
+        <div ngxSlickItem *ngFor="let slide of student_list" class="slide" id="slide">
+          <img src="{{ slide.imageUrl }}" alt="" height="300px" width="90%" class="imagecenter">
+          <p>{{slide.firstname}} {{slide.lastname}}</p>
+        </div>
+      </ngx-slick-carousel>      
+</div>
+<div class="jumbotron">
+  <h3 class="text-center">How I Implement slick-carousel</h3><br>
+  <div class="container" style="margin-left: 20%">
+  1) Install ngx-slick-carousel using <h6>npm install ngx-slick-carousel --save</h6><br>
+  2) Install Jquery using <h6>npm install jquery --save</h6> <br>
+  3) Install slick-carousel using <h6>npm install slick-carousel --save</h6> <br>
+  4) Add Dependency in angular.json file
+  <h6>
+    Include this in style
+    <br>
+    "styles": [ <br>
+    ... <br>
+    "node_modules/slick-carousel/slick/slick.scss",<br>
+    "node_modules/slick-carousel/slick/slick-theme.scss", <br>
+    ...br <br>
+    ] <br>
+    <br>
+    Include this in scripts
+    <br>
+    "scripts": [ <br>
+    ... <br>
+    "node_modules/jquery/dist/jquery.min.js", <br>
+    "node_modules/slick-carousel/slick/slick.min.js", <br>
+    ... <br>
+    ] <br>
+  </h6>
+
+  5) Add Code in html component file from
+  <h6>
+    https://www.npmjs.com/package/ngx-slick-carousel
+  </h6>
+  6) Add ngx-slick-carousel module into app module.
+  <br>
+  7) Follow the steps which is given in below link...
+  <br>
+  8) Done.
+  </div>
+</div>
+
+<div class="jumbotron">
+  <h3 class="text-center">How I Use Firebase</h3><br>
+  <div class="container" style="margin-left: 20%">
+  1) Install Firebase using <h6>npm install firebase @angular/fire --save</h6><br>
+  2) Add Firebase Modules into app module <br>
+  3) Create Firebase project into firebase console.<br>
+  4) Take configuaretion of firebase and add into angular environment file e.g.
+  <h6>
+    firebase: {{ <br>
+                    apiKey: 'your-key', <br>
+                    authDomain: 'your-project-authdomain',
+                    databaseURL: 'your-database-URL', <br>
+                    projectId: 'your-project-id', <br>
+                    storageBucket: 'your-storage-bucket', <br>
+                    messagingSenderId: 'your-messaging-sender-id' <br>
+                  }} <br>
+  </h6>
+
+  5) Create Add and Get Services using firebase services
+  <br>
+  6) Done.
+</div>
+</div>

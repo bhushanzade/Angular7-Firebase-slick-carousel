@@ -1,0 +1,98 @@
+<div class="jumbotron text-center">
+  <div class="text-center">
+    <h4>To add new student form</h4>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-7">
+      <form class="needs-validation" #addStudentForm="ngForm" (ngSubmit)="create(addStudentForm)">
+        <div class="form-group">
+          <label>Student First Name</label>
+          <input #lastname="ngModel" [(ngModel)]="student_list.firstname" name="firstname" id="firstname" type="text"
+            class="form-control" required>
+        </div>
+        <div class="form-group">
+          <label>Student Last Name</label>
+          <div class="input-group">
+            <input #lastname="ngModel" [(ngModel)]="student_list.lastname" name="lastname" id="lastname" type="text"
+              class="form-control" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Gender</label>
+          <div class="row" style="margin-left: 5px">
+              <div class="custom-control custom-radio col-md-2">
+                  <input id="male" type="radio" [(ngModel)]="student_list.gender" class="custom-control-input" value="Male" name="gender">
+                  <label class="custom-control-label" for="male">Male</label>
+              </div>
+                <div class="custom-control custom-radio col-md-1">
+                  <input id="female" type="radio" [(ngModel)]="student_list.gender" class="custom-control-input" value="Female" name="gender">
+                  <label class="custom-control-label" for="female">Female</label>
+                </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Date of Birth</label>
+          <div class="input-group">
+            <input #dob="ngModel" [(ngModel)]="student_list.dob" name="dob" id="dob" type="date"
+              class="form-control" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>University</label>
+          <select #university="ngModel" [(ngModel)]="student_list.university" name="university" id="university"
+            class="form-control" required>
+            <option>Savitribai Phule Pune University</option>
+            <option>Mumbai University</option>
+            <option>Coimbaator Univarsity</option>
+            <option>Delhi Univarsity</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Highest Education</label>
+          <div class="input-group">
+            <input #high_edu="ngModel" [(ngModel)]="student_list.high_edu" name="high_edu" id="high_edu" type="text"
+              class="form-control" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>College Name</label>
+          <div class="input-group">
+            <input #collage="ngModel" [(ngModel)]="student_list.collage" name="collage" id="collage"
+              type="text" class="form-control" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Email ID</label>
+          <div class="input-group">
+            <input #email="ngModel" [(ngModel)]="student_list.email" name="email" id="email"
+              type="email" class="form-control">
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Phone</label>
+          <input #phone="ngModel" [(ngModel)]="student_list.phone" name="phone" id="phone" type="tel"
+            class="form-control" required>
+        </div>
+        <div class="form-group">
+          <label> Select Student Image</label>
+          <br>
+          <input name="file" [(ngModel)]="student_list.imageUrl" type="file" id="file" (change)="handleFileInput($event.target.files)">
+        </div>
+        <button class="btn btn-primary btn-lg btn-block" type="submit">Add Student</button>
+      </form>
+    </div>
+    <!-- This is showing Image when selecting image file -->
+    <div class="col-md-4" style="padding-top: 50px;">
+      <div class="card" *ngIf="student_list.imageUrl">
+        <div class="card card-cascade wider">
+          <div class="view overlay hm-white-slight">
+            <img [src]="student_list.imageUrl" class="img-fluid" alt="" width="360px" height="640px">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<br> <br>

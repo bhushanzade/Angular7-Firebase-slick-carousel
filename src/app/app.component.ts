@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'Techved-Task-Bhushan-Zade';
+  title = 'Angular7-Firebase-Crud-Slick-Carousel';
 }

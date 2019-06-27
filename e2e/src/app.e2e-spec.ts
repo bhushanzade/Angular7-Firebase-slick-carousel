@@ -9,6 +9,6 @@ describe('workspace-project App', () => {
 
   it('should display welcome message', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('Welcome to Techved-Task-Bhushan-Zade!');
+    expect(page.getParagraphText()).toEqual('Welcome to Angular7-Firebase-Crud-Slick-Carousel!');
   });
 });

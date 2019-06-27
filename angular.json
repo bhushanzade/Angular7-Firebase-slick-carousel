@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "Techved-Task-Bhushan-Zade": {
+    "Angular7-Firebase-Crud-Slick-Carousel": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/Techved-Task-Bhushan-Zade",
+            "outputPath": "dist/Angular7-Firebase-Crud-Slick-Carousel",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -27,9 +27,15 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "node_modules/slick-carousel/slick/slick.scss",
+              "node_modules/slick-carousel/slick/slick-theme.scss",
+              "node_modules/bootstrap/dist/css/bootstrap.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/slick-carousel/slick/slick.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -61,18 +67,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "Techved-Task-Bhushan-Zade:build"
+            "browserTarget": "Angular7-Firebase-Crud-Slick-Carousel:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "Techved-Task-Bhushan-Zade:build:production"
+              "browserTarget": "Angular7-Firebase-Crud-Slick-Carousel:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "Techved-Task-Bhushan-Zade:build"
+            "browserTarget": "Angular7-Firebase-Crud-Slick-Carousel:build"
           }
         },
         "test": {
@@ -106,7 +112,7 @@
         }
       }
     },
-    "Techved-Task-Bhushan-Zade-e2e": {
+    "Angular7-Firebase-Crud-Slick-Carousel-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "prefix": "",
@@ -115,11 +121,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "Techved-Task-Bhushan-Zade:serve"
+            "devServerTarget": "Angular7-Firebase-Crud-Slick-Carousel:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "Techved-Task-Bhushan-Zade:serve:production"
+              "devServerTarget": "Angular7-Firebase-Crud-Slick-Carousel:serve:production"
             }
           }
         },
@@ -135,5 +141,5 @@
       }
     }
   },
-  "defaultProject": "Techved-Task-Bhushan-Zade"
+  "defaultProject": "Angular7-Firebase-Crud-Slick-Carousel"
 }
